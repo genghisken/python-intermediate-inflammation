@@ -23,7 +23,9 @@ def test_daily_mean(test, expected):
 @pytest.mark.parametrize(
     "test, expected",
     [
+        ([[0, 0, 0], [0, 0, 0], [0, 0, 0]], [0, 0, 0]),
         ([[4, 2, 5], [1, 6, 2], [4, 1, 9]], [4, 6, 9]),
+        ([[4, -2, 5], [1, -6, 2], [-4, -1, 9]], [4, -1, 9]),
     ])
 def test_daily_max(test, expected):
     """Test mean function works for array of zeroes and positive integers."""
@@ -34,6 +36,8 @@ def test_daily_max(test, expected):
 @pytest.mark.parametrize(
     "test, expected",
     [
+        ([[0, 0, 0], [0, 0, 0], [0, 0, 0]], [0, 0, 0]),
+        ([[4, 2, 5], [1, 6, 2], [4, 1, 9]], [1, 1, 2]),
         ([[4, -2, 5], [1, -6, 2], [-4, -1, 9]], [-4, -6, 2]),
     ])
 def test_daily_min(test, expected):
