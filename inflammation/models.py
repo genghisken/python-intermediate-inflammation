@@ -68,6 +68,7 @@ def patient_normalise(data):
 
 # TODO(lesson-design) Add Patient class
 
+
 class Observation:
     def __init__(self, day, value):
         self.day = day
@@ -76,6 +77,7 @@ class Observation:
     def __str__(self):
         return self.value
 
+
 class Person:
     def __init__(self, name):
         self.name = name
@@ -83,8 +85,10 @@ class Person:
     def __str__(self):
         return self.name
 
+
 class Patient(Person):
     """A patient in an inflammation study."""
+
     def __init__(self, name, observations=None):
         super().__init__(name)
 
@@ -111,6 +115,7 @@ class Patient(Person):
 
 class Doctor(Person):
     """A patient in an inflammation study."""
+
     def __init__(self, name, patients=[]):
         super().__init__(name)
 
