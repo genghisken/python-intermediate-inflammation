@@ -28,10 +28,10 @@ def daily_mean(data):
 
 
 def daily_max(data):
-    """Calculate the daily minimum of a 2D inflammation data array for each day.
+    """Calculate the daily maximum of a 2D inflammation data array for each day.
 
     :param data: A 2D data array with inflammation data (each row contains measurements for a single patient across all days).
-    :returns: An array of minimum values of measurements for each day.
+    :returns: An array of maximum values of measurements for each day.
     """
     return np.max(data, axis=0)
 
