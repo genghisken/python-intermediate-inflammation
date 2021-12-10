@@ -45,8 +45,7 @@ def daily_min(data):
 
 
 def patient_normalise(data):
-    """
-    Normalise patient data between 0 and 1 of a 2D inflammation data array.
+    """Normalise patient data between 0 and 1 of a 2D inflammation data array.
 
     Any NaN values are ignored, and normalised to 0
 
