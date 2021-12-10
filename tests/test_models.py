@@ -5,7 +5,6 @@ import numpy.testing as npt
 import pytest
 
 
-
 @pytest.mark.parametrize(
     "test, expected",
     [
@@ -52,6 +51,7 @@ def test_daily_min_string():
 
     with pytest.raises(TypeError):
         error_expected = daily_min([['Hello', 'there'], ['General', 'Kenobi']])
+
 
 @pytest.mark.parametrize(
     "test, expected, raises",
@@ -104,6 +104,8 @@ def test_patient_normalise(test, expected, raises):
         test = np.array(test)
     if raises:
         with pytest.raises(raises):
-            npt.assert_almost_equal(patient_normalise(test), np.array(expected), decimal=2)
+            npt.assert_almost_equal(patient_normalise(
+                test), np.array(expected), decimal=2)
     else:
-        npt.assert_almost_equal(patient_normalise(test), np.array(expected), decimal=2)
+        npt.assert_almost_equal(patient_normalise(
+            test), np.array(expected), decimal=2)

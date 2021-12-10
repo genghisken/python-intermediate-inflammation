@@ -24,6 +24,7 @@ class Serializer(ABC):
     def load(cls, path):
         raise NotImplementedError
 
+
 class PatientSerializer(Serializer):
     model = models.Patient
 
@@ -39,7 +40,8 @@ class PatientSerializer(Serializer):
         instances = []
 
         for item in data:
-            item['observations'] = ObservationSerializer.deserialize(item.pop('observations'))
+            item['observations'] = ObservationSerializer.deserialize(
+                item.pop('observations'))
             instances.append(cls.model(**item))
 
         return instances
