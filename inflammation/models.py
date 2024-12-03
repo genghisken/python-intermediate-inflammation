@@ -52,7 +52,7 @@ def patient_normalise(data):
 
     :param data: 2d array of inflammation data
     :type data: ndarray
-
+    :returns: np.ndarray, The normalised data
     """
     if not isinstance(data, np.ndarray):
         raise TypeError('data input should be ndarray')
